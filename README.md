@@ -1,7 +1,7 @@
 # .NET 11 New Features Overview and Demos
 
 ## Scope
-This is a non-exhaustive list of some of the new .NET 11 features. Some of them also include a short demo. The features that are shown are the ones I consider most relevant to our everyday work at CDW.
+This is a non-exhaustive list of some of the new .NET 11 features. Some of them also include a short demo. The features that are shown here are the ones I consider most relevant to our everyday work at CDW.
 
 Features are classified in categories by https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-11/overview
 
