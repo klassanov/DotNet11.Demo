@@ -2,7 +2,7 @@
 {
     internal class UnionTypesDemo
     {
-        internal void RunDemo()
+        internal void Run()
         {
             Console.WriteLine("UnionTypes Demo");
             Console.WriteLine("----------------");
@@ -17,6 +17,7 @@
             };
 
             Console.WriteLine(result);
+            Console.WriteLine("----------------");
         }
 
         private PostCreationResult CreatePost(string content)
