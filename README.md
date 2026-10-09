@@ -22,6 +22,10 @@ Combination of more unrelated types under one hat
   This approach brings performance improvements across the entire async ecosystem, better debugging and profiling experiences and a cleaner stacktrace.
 
 ### JSON Lines output [DEMO]
+Newline-delimited JSON.
+
+It's a great format for log files. It's also a flexible format for passing messages between cooperating processes.
+
 JSON Lines Text Format can be generated with System.Text.Json.JsonSerializer.
 With the default topLevelValues: false, the output remains one JSON array.
 
@@ -32,7 +36,7 @@ The serializer writes each value compactly and follows it with a line feed (LF)
 
 
 
-### LINQ join improvements (Left, Right, Full) [DEMO]
+### LINQ join improvements (LeftJoin, RightJoin, FullJoin) [DEMO]
 
 
 
@@ -55,7 +59,8 @@ both Memory allocation and Processing time (no need to do a 2nd string walking b
 
 
 	Note: IEEE 754 binary (base 10) floating-point types	
-		
+	
+	
 	  System.Single (float) -> 6-9 significant digits, 4 bytes
 
 	  System.Double (double) -> 15-17 significant digits, 8 bytes

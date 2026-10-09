@@ -4,10 +4,10 @@
 //new UnionTypesDemo().Run();
 
 // Async Runtime
-//await new RuntimeAsyncDemo().Run();
+await new RuntimeAsyncDemo().Run();
 
 //Partial Parsing
 //new PartialParsingDemo().Run();
 
 //JSONLinesDemo
-await new JSONLinesDemo().Run();
+//await new JSONLinesDemo().Run();
