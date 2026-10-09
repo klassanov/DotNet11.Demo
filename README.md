@@ -39,14 +39,23 @@ Features are classified in categories by https://learn.microsoft.com/en-us/dotne
 	
 	
 
-- #### New IEEE 754 decimal floating-point types  (Decimal32, Decimal64, and Decimal128)
-  New IEEE 754 Decimal (base 10) floating point numbers (not to be confused with the binary floating point numbers float and double): 
+- #### New IEEE 754 decimal (base 10) floating-point types  (Decimal32, Decimal64, and Decimal128)
+  Not to be confused with the binary floating point numbers float and double: 
 	
-	System.Numerics.Decimal32 -> 7 significant digits,  4 bytes
-	System.Numerics.Decimal64 -> 16 significant digits,  8 bytes
-	System.Numerics.Decimal128 -> 34 significant digits, 16 bytes
+	  System.Numerics.Decimal32 -> 7 significant digits,  4 bytes
+
+	  System.Numerics.Decimal64 -> 16 significant digits,  8 bytes
 	
-	System.Decimal (well known old well known) -> 28–29 significant digits in 16 bytes.
+	  System.Numerics.Decimal128 -> 34 significant digits, 16 bytes
+	
+	  System.Decimal (well known old well known) -> 28–29 significant digits in 16 bytes.
+
+
+	Note: IEEE 754 binary (base 10) floating-point types	
+		
+	  System.Single (float) -> 6-9 significant digits, 4 bytes
+
+	  System.Double (double) -> 15-17 significant digits, 8 bytes
 
 
 - #### Generic Complex<T>
