@@ -9,37 +9,35 @@ Features are classified in categories by https://learn.microsoft.com/en-us/dotne
 
 ![.NET Release Schedule](https://dotnet.microsoft.com/blob-assets/images/illustrations/release-schedule-dark.svg)
 
-## C# 15
-- #### Union types [DEMO]
+## New Features
 
-## Runtime
+### Union types [DEMO]
+Combination of more unrelated types under one hat
 
-
-- #### Runtime Async [DEMO]: 
+### Runtime Async [DEMO] 
   How it has been so far? When you write an async method, the C# compiler rewrites it into a state machine, i.e. it generates code implementing IAsyncStateMachine that tracks the method’s progress across suspension points. 
   This approach works fine, but comes with some trade-offs.
   The .NET 11 RuntimeAsync is  new asynchronous execution model arriving in .NET 11. Async methods handling has been moved from the compiler to the .NET CLR. 
   Now, the compiler, instead of a state machine, generates  simpler IL annotated with [MethodImpl(MethodImplOptions.Async)].
   This approach brings performance improvements across the entire async ecosystem, better debugging and profiling experiences and a cleaner stacktrace.
 
-## Libraries
-- #### System.Text.Json: Union type serialization, JSON Lines output [DEMO]
+### JSON Lines output [DEMO]
 
 
-- #### EqualityComparer<T>.Create [DEMO]
-
-
-
-- #### LINQ join improvements (Left, Right, Full) [DEMO]
+### EqualityComparer<T>.Create [DEMO]
 
 
 
-- #### Partial numeric parsing. INumberBase<TSelf>.TryParsePartial for delimiter-aware parsing [DEMO]
+### LINQ join improvements (Left, Right, Full) [DEMO]
+
+
+
+### Partial numeric parsing. INumberBase<TSelf>.TryParsePartial for delimiter-aware parsing [DEMO]
 	Partial Parsing for all the Numeric types: most efficient in terms of both Memory allocation and Processing time (no need to do a 2nd string walking behind the scenes for the delimiter scan)
 	
 	
 
-- #### New IEEE 754 decimal (base 10) floating-point types  (Decimal32, Decimal64, and Decimal128)
+### New IEEE 754 decimal (base 10) floating-point types  (Decimal32, Decimal64, and Decimal128)
   Not to be confused with the binary floating point numbers float and double: 
 	
 	  System.Numerics.Decimal32 -> 7 significant digits,  4 bytes
@@ -65,9 +63,6 @@ Features are classified in categories by https://learn.microsoft.com/en-us/dotne
 - #### dotnet test CLI command improvements
 
 - #### Platform support for more than 1024 CPUs
-
-## Others
-- ??? C# devkit for VS Code and C# doctor ???
 
 
 ## Sources
