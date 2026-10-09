@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Numerics;
 
 namespace DotNet11.Demo.ConsoleApp
 {
@@ -8,18 +9,18 @@ namespace DotNet11.Demo.ConsoleApp
 
         internal void Run()
         {
-            DoubleParsing("3.15,4.7,5.244");
+            NumberParsing<double>("3.15,4.7,5.244");
             Console.WriteLine();
             ValidPrefixParsing("120px");
         }
 
-        private void DoubleParsing(ReadOnlySpan<char> dataRow)
+        private void NumberParsing<T>(ReadOnlySpan<char> dataRow) where T: INumber<T>
         {
             Console.WriteLine(@$"Parsing string ""{dataRow}""");
 
             while (!dataRow.IsEmpty)
             {
-                if(!double.TryParsePartial(dataRow, NumberStyles.Float, CultureInfo.InvariantCulture, out double parsed, out int numConsumedChars))
+                if(!T.TryParsePartial(dataRow, NumberStyles.Float, CultureInfo.InvariantCulture, out T? parsed, out int numConsumedChars))
                 {
                     throw new FormatException();
                 }
@@ -39,7 +40,7 @@ namespace DotNet11.Demo.ConsoleApp
         {
             Console.WriteLine(@$"Parsing string ""{dataRow}""");
 
-            if (!double.TryParsePartial(dataRow, NumberStyles.Float, CultureInfo.InvariantCulture, out double parsed, out int numConsumedChars))
+            if (!int.TryParsePartial(dataRow, NumberStyles.Integer, CultureInfo.InvariantCulture, out int parsed, out int numConsumedChars))
             {
                 throw new FormatException();
             }
@@ -47,7 +48,7 @@ namespace DotNet11.Demo.ConsoleApp
             PrintResult(parsed, numConsumedChars);
         }
 
-        private void PrintResult(double parsed, int consumed)
+        private void PrintResult<T>(T parsed, int consumed) where T: INumber<T>
         {
             Console.WriteLine($"Parsed: {parsed}, Consumed chars: {consumed}");
         }
