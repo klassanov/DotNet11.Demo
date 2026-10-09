@@ -4,4 +4,7 @@
 //new UnionTypesDemo().Run();
 
 // Async Runtime
-await new RuntimeAsyncDemo().Run();
+//await new RuntimeAsyncDemo().Run();
+
+//Partial Parsing
+new PartialParsingDemo().Run();

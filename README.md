@@ -24,10 +24,28 @@ Features are classified in categories by https://learn.microsoft.com/en-us/dotne
 
 ## Libraries
 - #### System.Text.Json: Union type serialization, JSON Lines output [DEMO]
+
+
 - #### EqualityComparer<T>.Create [DEMO]
+
+
+
 - #### LINQ join improvements (Left, Right, Full) [DEMO]
+
+
+
 - #### Partial numeric parsing. INumberBase<TSelf>.TryParsePartial for delimiter-aware parsing [DEMO]
+	Partial Parsing for all the Numeric types: most efficient in terms of both Memory allocation and Processing time (no need to do a 2nd string walking behind the scenes for the delimiter scan)
+	
+	
+
 - #### New IEEE 754 decimal floating-point types  (Decimal32, Decimal64, and Decimal128)
+  New IEEE 754 Decimal floating point numbers (not to be confused with the binary floating point numbers float and double): 
+	Decimal 32 ->
+	Decimal 64 ->
+	Decimal128 ->
+	Well known decimal ->
+
 - #### Generic Complex<T>
 
 ## SDK and Tooling
@@ -46,3 +64,4 @@ Features are classified in categories by https://learn.microsoft.com/en-us/dotne
 - https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-11/runtime
 - https://laurentkempe.com/2026/02/14/exploring-net-11-preview-1-runtime-async-a-dive-into-the-future-of-async-in-net/
 - https://medium.com/@skyake/how-fast-is-net-11-runtime-async-b9c821529cd5
+- https://www.youtube.com/watch?v=5fvi7m1QxIY&t
