@@ -36,8 +36,9 @@ The serializer writes each value compactly and follows it with a line feed (LF)
 
 
 
-### Partial numeric parsing. INumberBase<TSelf>.TryParsePartial for delimiter-aware parsing [DEMO]
-	Partial Parsing for all the Numeric types: most efficient in terms of both Memory allocation and Processing time (no need to do a 2nd string walking behind the scenes for the delimiter scan)
+### Partial numeric parsing: TryParsePartial for delimiter-aware parsing [DEMO]
+`TryParsePartial()` method for all the Numeric types: benchmarks show that it is the most efficient in terms of
+both Memory allocation and Processing time (no need to do a 2nd string walking behind the scenes for the delimiter scan)
 	
 	
 
