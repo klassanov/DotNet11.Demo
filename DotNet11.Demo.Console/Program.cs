@@ -7,4 +7,7 @@
 //await new RuntimeAsyncDemo().Run();
 
 //Partial Parsing
-new PartialParsingDemo().Run();
+//new PartialParsingDemo().Run();
+
+//JSONLinesDemo
+await new JSONLinesDemo().Run();

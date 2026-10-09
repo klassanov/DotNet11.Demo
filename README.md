@@ -22,7 +22,11 @@ Combination of more unrelated types under one hat
   This approach brings performance improvements across the entire async ecosystem, better debugging and profiling experiences and a cleaner stacktrace.
 
 ### JSON Lines output [DEMO]
+JSON Lines Text Format can be generated with System.Text.Json.JsonSerializer.
+With the default topLevelValues: false, the output remains one JSON array.
 
+With topLevelValues: true, the output is a canonical JSON Lines (JSONL).
+The serializer writes each value compactly and follows it with a line feed (LF)
 
 ### EqualityComparer<T>.Create [DEMO]
 
