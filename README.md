@@ -1,7 +1,7 @@
 # .NET 11 New Features Overview and Demos
 
 ## Scope
-This is a non-exhaustive list of some of the new .NET 11 features. A short demo is included for some of them. The features that are shown here are the ones I consider most relevant to our everyday work at CDW.
+This document provides a non-exhaustive overview of some of the new .NET 11 features. Selected features include accompanying demos. These features represent those I consider most relevant to our everyday work at CDW.
 
 Features are classified in categories by https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-11/overview
 
@@ -15,36 +15,35 @@ Features are classified in categories by https://learn.microsoft.com/en-us/dotne
 Combination of more unrelated types under one hat
 
 ### ⭐ Runtime Async [DEMO] 
-  How it has been so far? When you write an async method, the C# compiler rewrites it into a state machine, i.e. it generates code implementing IAsyncStateMachine that tracks the method’s progress across suspension points. 
-  This approach works fine, but comes with some trade-offs.
-  The .NET 11 RuntimeAsync is  new asynchronous execution model arriving in .NET 11. Async methods handling has been moved from the compiler to the .NET CLR. 
-  Now, the compiler, instead of a state machine, generates  simpler IL annotated with [MethodImpl(MethodImplOptions.Async)].
-  This approach brings performance improvements across the entire async ecosystem, better debugging and profiling experiences and a cleaner stacktrace.
+  How has it worked until now? When you write an async method, the C# compiler rewrites it into a state machine, i.e. it generates code implementing IAsyncStateMachine that tracks the method’s progress across suspension points. 
+  This approach works well but involves trade-offs.
+  The new `RuntimeAsync` model is an asynchronous execution feature arriving in .NET 11. Async method handling has been moved from the compiler to the .NET CLR.
+  Now the compiler generates simpler IL instead of a state machine, annotated with `[MethodImpl(MethodImplOptions.Async)]`.
+  This approach brings performance improvements across the entire async ecosystem, improved debugging and profiling capabilities, and cleaner stack traces.
 
 ### ⭐ JSON Lines aka JSONL Output [DEMO]
 Newline-delimited JSON.
 
-It's a great format for log files. It's also a flexible format for passing messages between cooperating processes.
+It works well for log files. It also provides a flexible format for passing messages between cooperating processes.
 
-JSON Lines Text Format can be generated with System.Text.Json.JsonSerializer.
-With the default topLevelValues: false, the output remains one JSON array.
+JSON Lines output can be generated with `System.Text.Json.JsonSerializer`.
+By default (`topLevelValues: false`), the output remains a single JSON array.
 
-With topLevelValues: true, the output is a canonical JSON Lines (JSONL).
-The serializer writes each value compactly and follows it with a line feed (LF)
+With `topLevelValues: true`, the output is canonical JSON Lines (JSONL).
+The serializer writes each value compactly, followed by a line feed (LF).
 
 ### ⭐ Tuple-Returning Joins [DEMO]
-New overloads of `Enumerable.Join()` and `Enumerable.GroupJoin()` return tuples directly without requiring a result selector.
-It is also available on the FullJoin, LeftJoin, and RightJoin operations.
+New overloads for `Enumerable.Join()` and `Enumerable.GroupJoin()` return tuples directly without requiring a result selector.
+These overloads are also available for `FullJoin`, `LeftJoin`, and `RightJoin` operations.
 
 
 ### ⭐ Partial Numeric Parsing: `TryParsePartial` for delimiter-aware parsing [DEMO]
-`TryParsePartial()` method for all the Numeric types: benchmarks show that it is the most efficient in terms of
-both Memory allocation and Processing time (no need to do a 2nd string walking behind the scenes for the delimiter scan)
+`TryParsePartial()` method is available for all numeric types: Benchmarks demonstrate superior efficiency in both memory allocation and processing time (no need to do a 2nd string walking behind the scenes for the delimiter scan)
 	
 	
 
-### ⭐ New IEEE 754 Decimal (base 10) Floating-point types: `Decimal32`, `Decimal64` and `Decimal128`
-  Not to be confused with the binary floating point numbers float and double: 
+### ⭐ New IEEE 754 Decimal (base-10) floating-point types: `Decimal32`, `Decimal64` and `Decimal128`
+  Not to be confused with the binary floating-point types, `float` and `double`:
 	
 	  System.Numerics.Decimal32 -> 7 significant digits,  4 bytes
 
@@ -52,10 +51,10 @@ both Memory allocation and Processing time (no need to do a 2nd string walking b
 	
 	  System.Numerics.Decimal128 -> 34 significant digits, 16 bytes
 	
-	  System.Decimal (well known old well known) -> 28–29 significant digits in 16 bytes.
+	  System.Decimal (the well-known legacy type) -> 28–29 significant digits in 16 bytes.
 
 
-	Note: IEEE 754 binary (base 10) floating-point types	
+	Note: IEEE 754 binary (base-2) floating-point types for comparison:
 	
 	
 	  System.Single (float) -> 6-9 significant digits, 4 bytes
@@ -64,7 +63,7 @@ both Memory allocation and Processing time (no need to do a 2nd string walking b
 
 
 ### ⭐ CLI: dotnet run and dotnet test command improvements [DEMO]
-Pass environment variables with dotnet run 
+Pass environment variables using dotnet run:
 `dotnet run -e VAR_1="TestVar1" -e VAR_2="TestVar2"`
 
 ## Sources
