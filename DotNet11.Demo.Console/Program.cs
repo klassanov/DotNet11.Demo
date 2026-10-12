@@ -4,10 +4,13 @@
 //new UnionTypesDemo().Run();
 
 // Async Runtime
-await new RuntimeAsyncDemo().Run();
+//await new RuntimeAsyncDemo().Run();
 
 //Partial Parsing
 //new PartialParsingDemo().Run();
 
 //JSONLinesDemo
 //await new JSONLinesDemo().Run();
+
+//Tuple Returning Joins Demo
+new TupleReturningJoinsDemo().Run();

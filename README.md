@@ -32,11 +32,11 @@ With the default topLevelValues: false, the output remains one JSON array.
 With topLevelValues: true, the output is a canonical JSON Lines (JSONL).
 The serializer writes each value compactly and follows it with a line feed (LF)
 
-### EqualityComparer<T>.Create [DEMO]
+### Tuple-returning Joins 
+New overloads of `Enumerable.Join()` and `Enumerable.GroupJoin()` return tuples directly without requiring a result selector.
+It is also available on the FullJoin, LeftJoin, and RightJoin operations.
 
-
-
-### LINQ join improvements (LeftJoin, RightJoin, FullJoin) [DEMO]
+also valid for LeftJoin, RightJoin, FullJoin [DEMO]
 
 
 
