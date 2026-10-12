@@ -1,7 +1,7 @@
 # .NET 11 New Features Overview and Demos
 
 ## Scope
-This is a non-exhaustive list of some of the new .NET 11 features. Some of them also include a short demo. The features that are shown here are the ones I consider most relevant to our everyday work at CDW.
+This is a non-exhaustive list of some of the new .NET 11 features. A short demo is included for some of them. The features that are shown here are the ones I consider most relevant to our everyday work at CDW.
 
 Features are classified in categories by https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-11/overview
 
@@ -9,19 +9,19 @@ Features are classified in categories by https://learn.microsoft.com/en-us/dotne
 
 ![.NET Release Schedule](https://dotnet.microsoft.com/blob-assets/images/illustrations/release-schedule-dark.svg)
 
-## New Features
+## Some of the New Features
 
-### Union types [DEMO]
+### ⭐ Union types [DEMO]
 Combination of more unrelated types under one hat
 
-### Runtime Async [DEMO] 
+### ⭐ Runtime Async [DEMO] 
   How it has been so far? When you write an async method, the C# compiler rewrites it into a state machine, i.e. it generates code implementing IAsyncStateMachine that tracks the method’s progress across suspension points. 
   This approach works fine, but comes with some trade-offs.
   The .NET 11 RuntimeAsync is  new asynchronous execution model arriving in .NET 11. Async methods handling has been moved from the compiler to the .NET CLR. 
   Now, the compiler, instead of a state machine, generates  simpler IL annotated with [MethodImpl(MethodImplOptions.Async)].
   This approach brings performance improvements across the entire async ecosystem, better debugging and profiling experiences and a cleaner stacktrace.
 
-### JSON Lines aka JSONL Output [DEMO]
+### ⭐ JSON Lines aka JSONL Output [DEMO]
 Newline-delimited JSON.
 
 It's a great format for log files. It's also a flexible format for passing messages between cooperating processes.
@@ -32,18 +32,18 @@ With the default topLevelValues: false, the output remains one JSON array.
 With topLevelValues: true, the output is a canonical JSON Lines (JSONL).
 The serializer writes each value compactly and follows it with a line feed (LF)
 
-### Tuple-Returning Joins [DEMO]
+### ⭐ Tuple-Returning Joins [DEMO]
 New overloads of `Enumerable.Join()` and `Enumerable.GroupJoin()` return tuples directly without requiring a result selector.
 It is also available on the FullJoin, LeftJoin, and RightJoin operations.
 
 
-### Partial Numeric Parsing: `TryParsePartial` for delimiter-aware parsing [DEMO]
+### ⭐ Partial Numeric Parsing: `TryParsePartial` for delimiter-aware parsing [DEMO]
 `TryParsePartial()` method for all the Numeric types: benchmarks show that it is the most efficient in terms of
 both Memory allocation and Processing time (no need to do a 2nd string walking behind the scenes for the delimiter scan)
 	
 	
 
-### New IEEE 754 Decimal (base 10) Floating-point types  (Decimal32, Decimal64, and Decimal128)
+### ⭐ New IEEE 754 Decimal (base 10) Floating-point types: `Decimal32`, `Decimal64` and `Decimal128`
   Not to be confused with the binary floating point numbers float and double: 
 	
 	  System.Numerics.Decimal32 -> 7 significant digits,  4 bytes
@@ -63,9 +63,9 @@ both Memory allocation and Processing time (no need to do a 2nd string walking b
 	  System.Double (double) -> 15-17 significant digits, 8 bytes
 
 
-### CLI: dotnet run and dotnet test command improvements [DEMO]
+### ⭐ CLI: dotnet run and dotnet test command improvements [DEMO]
 Pass environment variables with dotnet run 
-`dotnet run -e VAR_1=TestVar1 -e VAR_2=TestVar2`
+`dotnet run -e VAR_1="TestVar1" -e VAR_2="TestVar2"`
 
 ## Sources
 - https://versionsof.net/core/

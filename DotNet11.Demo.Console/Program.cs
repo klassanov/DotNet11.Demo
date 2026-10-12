@@ -13,4 +13,7 @@
 //await new JSONLinesDemo().Run();
 
 //Tuple Returning Joins Demo
-new TupleReturningJoinsDemo().Run();
+//new TupleReturningJoinsDemo().Run();
+
+//CLIEnvVarsDemo
+new CLIEnvVarsDemo().Run();
