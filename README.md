@@ -21,7 +21,7 @@ Combination of more unrelated types under one hat
   Now, the compiler, instead of a state machine, generates  simpler IL annotated with [MethodImpl(MethodImplOptions.Async)].
   This approach brings performance improvements across the entire async ecosystem, better debugging and profiling experiences and a cleaner stacktrace.
 
-### JSON Lines output [DEMO]
+### JSON Lines aka JSONL Output [DEMO]
 Newline-delimited JSON.
 
 It's a great format for log files. It's also a flexible format for passing messages between cooperating processes.
@@ -32,21 +32,18 @@ With the default topLevelValues: false, the output remains one JSON array.
 With topLevelValues: true, the output is a canonical JSON Lines (JSONL).
 The serializer writes each value compactly and follows it with a line feed (LF)
 
-### Tuple-returning Joins 
+### Tuple-Returning Joins [DEMO]
 New overloads of `Enumerable.Join()` and `Enumerable.GroupJoin()` return tuples directly without requiring a result selector.
 It is also available on the FullJoin, LeftJoin, and RightJoin operations.
 
-also valid for LeftJoin, RightJoin, FullJoin [DEMO]
 
-
-
-### Partial numeric parsing: TryParsePartial for delimiter-aware parsing [DEMO]
+### Partial Numeric Parsing: `TryParsePartial` for delimiter-aware parsing [DEMO]
 `TryParsePartial()` method for all the Numeric types: benchmarks show that it is the most efficient in terms of
 both Memory allocation and Processing time (no need to do a 2nd string walking behind the scenes for the delimiter scan)
 	
 	
 
-### New IEEE 754 decimal (base 10) floating-point types  (Decimal32, Decimal64, and Decimal128)
+### New IEEE 754 Decimal (base 10) Floating-point types  (Decimal32, Decimal64, and Decimal128)
   Not to be confused with the binary floating point numbers float and double: 
 	
 	  System.Numerics.Decimal32 -> 7 significant digits,  4 bytes
@@ -66,14 +63,9 @@ both Memory allocation and Processing time (no need to do a 2nd string walking b
 	  System.Double (double) -> 15-17 significant digits, 8 bytes
 
 
-- #### Generic Complex<T>
-
-## SDK and Tooling
-- #### dotnet run CLI command improvements: Pass environment variables with dotnet run [DEMO]
-- #### dotnet test CLI command improvements
-
-- #### Platform support for more than 1024 CPUs
-
+### CLI: dotnet run and dotnet test command improvements [DEMO]
+Pass environment variables with dotnet run 
+`dotnet run -e VAR_1=TestVar1 -e VAR_2=TestVar2`
 
 ## Sources
 - https://versionsof.net/core/
