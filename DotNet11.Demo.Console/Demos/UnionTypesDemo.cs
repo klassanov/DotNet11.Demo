@@ -1,13 +1,10 @@
-﻿namespace DotNet11.Demo.ConsoleApp
+﻿namespace DotNet11.Demo.ConsoleApp.Demos
 {
     internal class UnionTypesDemo
     {
         internal void Run()
         {
-            Console.WriteLine("UnionTypes Demo");
-            Console.WriteLine("----------------");
             Console.WriteLine("Creating a new post");
-
             var post = CreatePost("Lorem Ipsum");
             var result = post switch
             {
@@ -17,7 +14,6 @@
             };
 
             Console.WriteLine(result);
-            Console.WriteLine("----------------");
         }
 
         private PostCreationResult CreatePost(string content)

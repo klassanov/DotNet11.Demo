@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace DotNet11.Demo.ConsoleApp
+namespace DotNet11.Demo.ConsoleApp.Demos
 {
     // Enable runtime async by adding in the .csproj file:
     // <Features>runtime-async=on</Features>
@@ -9,10 +9,8 @@ namespace DotNet11.Demo.ConsoleApp
     {
         internal async Task Run()
         {
-            Console.WriteLine("RuntimeAsync Stacktrace Demo");
-            Console.WriteLine("----------------");
+            Console.WriteLine("RuntimeAsync Stacktrace");
             await OuterAsync();
-            Console.WriteLine("----------------");
         }
 
         private async Task OuterAsync()

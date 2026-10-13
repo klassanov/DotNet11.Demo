@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-namespace DotNet11.Demo.ConsoleApp
+namespace DotNet11.Demo.ConsoleApp.Demos
 {
     internal class JSONLinesDemo
     {

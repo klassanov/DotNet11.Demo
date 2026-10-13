@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using System.Numerics;
 
-namespace DotNet11.Demo.ConsoleApp
+namespace DotNet11.Demo.ConsoleApp.Demos
 {
     internal class PartialParsingDemo
     {
@@ -50,7 +50,7 @@ namespace DotNet11.Demo.ConsoleApp
 
         private void PrintResult<T>(T parsed, int consumed) where T: INumber<T>
         {
-            Console.WriteLine($"Parsed: {parsed}, Consumed chars: {consumed}");
+            Console.WriteLine($"Parsed: {parsed} Consumed chars: {consumed}");
         }
     }
 }
