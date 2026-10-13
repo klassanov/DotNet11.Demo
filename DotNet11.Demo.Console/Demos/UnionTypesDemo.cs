@@ -4,7 +4,7 @@
     {
         internal void Run()
         {
-            Console.WriteLine("Creating a new post");
+            FunConsoleWriter.WriteLine("Creating a new post");
             var post = CreatePost("Lorem Ipsum");
             var result = post switch
             {
@@ -13,7 +13,7 @@
                 PostCreationError error => $"Error: {error.Message}"
             };
 
-            Console.WriteLine(result);
+            FunConsoleWriter.WriteLine(result);
         }
 
         private PostCreationResult CreatePost(string content)

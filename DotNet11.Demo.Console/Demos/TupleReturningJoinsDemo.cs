@@ -36,7 +36,7 @@
 
             foreach (var (dev, proj) in result)
             {
-                Console.WriteLine($"{dev.Name} works on {proj.Description}");
+                FunConsoleWriter.WriteLine($"{dev.Name} works on {proj.Description}");
             }
         }
 
@@ -49,7 +49,7 @@
 
             foreach (var (dev, proj) in result)
             {
-                Console.WriteLine($"{dev.Name} works on {proj?.Description ?? "NO PROJECT"}");
+                FunConsoleWriter.WriteLine($"{dev.Name} works on {proj?.Description ?? "NO PROJECT"}");
             }
         }
 

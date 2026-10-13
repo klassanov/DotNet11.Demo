@@ -8,4 +8,8 @@
     <Features>runtime-async=on</Features>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Retro.Crt" Version="0.9.0" />
+  </ItemGroup>
+
 </Project>

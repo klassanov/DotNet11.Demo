@@ -16,7 +16,7 @@ namespace DotNet11.Demo.ConsoleApp.Demos
 
         private void NumberParsing<T>(ReadOnlySpan<char> dataRow) where T: INumber<T>
         {
-            Console.WriteLine(@$"Parsing string ""{dataRow}""");
+            FunConsoleWriter.WriteLine(@$"Parsing string ""{dataRow}""");
 
             while (!dataRow.IsEmpty)
             {
@@ -38,7 +38,7 @@ namespace DotNet11.Demo.ConsoleApp.Demos
 
         private void ValidPrefixParsing(ReadOnlySpan<char> dataRow)
         {
-            Console.WriteLine(@$"Parsing string ""{dataRow}""");
+            FunConsoleWriter.WriteLine(@$"Parsing string ""{dataRow}""");
 
             if (!int.TryParsePartial(dataRow, NumberStyles.Integer, CultureInfo.InvariantCulture, out int parsed, out int numConsumedChars))
             {
@@ -50,7 +50,7 @@ namespace DotNet11.Demo.ConsoleApp.Demos
 
         private void PrintResult<T>(T parsed, int consumed) where T: INumber<T>
         {
-            Console.WriteLine($"Parsed: {parsed} Consumed chars: {consumed}");
+            FunConsoleWriter.WriteLine($"Parsed: {parsed} Consumed chars: {consumed}");
         }
     }
 }
