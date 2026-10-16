@@ -6,18 +6,22 @@ namespace DotNet11.Demo.ConsoleApp.Demos
     {
         internal async Task Run()
         {
+            //Write data to file
             await using var fileStream = File.Create("people.jsonl");
             await JsonSerializer.SerializeAsyncEnumerable(
                 fileStream,
                 GetPeopleAsync(),
                 topLevelValues: true);
 
+
+            //Write data to console
             await using var outputStream = Console.OpenStandardOutput();
             await JsonSerializer.SerializeAsyncEnumerable(
                 outputStream, GetPeopleAsync(),
                 topLevelValues: true);
         }
 
+        //Data source
         async IAsyncEnumerable<Person> GetPeopleAsync()
         {
             yield return new(1, "Alice");

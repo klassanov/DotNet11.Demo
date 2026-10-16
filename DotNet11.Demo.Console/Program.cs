@@ -1,3 +1,3 @@
 ﻿using DotNet11.Demo.ConsoleApp;
 
-MenuHandler.HandleMenu();
+await MenuHandler.HandleMenu();

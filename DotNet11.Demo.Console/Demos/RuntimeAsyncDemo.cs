@@ -9,7 +9,7 @@ namespace DotNet11.Demo.ConsoleApp.Demos
     {
         internal async Task Run()
         {
-            FunConsoleWriter.WriteLine("RuntimeAsync Stacktrace");
+            Console.WriteLine("RuntimeAsync Stacktrace");
             await OuterAsync();
         }
 
@@ -28,7 +28,7 @@ namespace DotNet11.Demo.ConsoleApp.Demos
         private async Task InnerAsync()
         {
             await Task.CompletedTask;
-            FunConsoleWriter.WriteLine(new StackTrace(fNeedFileInfo: true).ToString()); //or just Environment.StackTrace;
+            Console.WriteLine(new StackTrace(fNeedFileInfo: true).ToString()); //or just Environment.StackTrace;
         }
     }
 }

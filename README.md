@@ -37,6 +37,11 @@ New overloads for `Enumerable.Join()` and `Enumerable.GroupJoin()` return tuples
 These overloads are also available for `FullJoin`, `LeftJoin`, and `RightJoin` operations.
 
 
+### ⭐ CLI: dotnet run and dotnet test command improvements [DEMO]
+Pass environment variables using dotnet run:
+`dotnet run -e VAR_1="TestVar1" -e VAR_2="TestVar2"`
+
+
 ### ⭐ Partial Numeric Parsing: `TryParsePartial` for delimiter-aware parsing [DEMO]
 `TryParsePartial()` method is available for all numeric types: Benchmarks demonstrate superior efficiency in both
 memory allocation and processing time (no need to do a 2nd string walking behind the scenes for the delimiter scan).
@@ -62,10 +67,6 @@ memory allocation and processing time (no need to do a 2nd string walking behind
 
 	  System.Double (double) -> 15-17 significant digits, 8 bytes
 
-
-### ⭐ CLI: dotnet run and dotnet test command improvements [DEMO]
-Pass environment variables using dotnet run:
-`dotnet run -e VAR_1="TestVar1" -e VAR_2="TestVar2"`
 
 ## ◆ Sources
 - https://versionsof.net/core/
