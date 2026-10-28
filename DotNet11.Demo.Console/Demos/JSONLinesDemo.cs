@@ -11,14 +11,14 @@ namespace DotNet11.Demo.ConsoleApp.Demos
             await JsonSerializer.SerializeAsyncEnumerable(
                 fileStream,
                 GetPeopleAsync(),
-                topLevelValues: true);
+                topLevelValues: false);
 
 
             //Write data to console
             await using var outputStream = Console.OpenStandardOutput();
             await JsonSerializer.SerializeAsyncEnumerable(
                 outputStream, GetPeopleAsync(),
-                topLevelValues: true);
+                topLevelValues: false);
         }
 
         //Data source
